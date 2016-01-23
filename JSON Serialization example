@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            var ryan = {user: "Ryan", from: "Idaho", major: "CIT"};
+            var jake = {user: "Jake", from: "California", major: "Geology"};
+            var sarah = {user: "Sarah", from: "China", major: "Business"};
+
+          // Nestes Objects within objects
+            var group = {u1: ryan, u2: jake, u3: sarah};
+            document.write(ryan.user + " is from " + ryan.from + " and his major is " + ryan.major);
+
+            // This will change the value of the object 
+            ryan.from = "The Moon"
+            ryan.major = "Rock Collecting";
+            document.write("<hr >");
+            document.write(ryan.user + " is from " + ryan.from + " and his major is " + ryan.major);
+            document.write("<hr >")
+            document.write(group.u2.user + " and " + group.u1.user + " like to " + group.u3.major);
+
+            // You can use both ways to get the data 
+            document.write("<hr >");
+            document.write(group.u2.user);
+            document.write("<hr >");
+            document.write(group["u2"]["user"]);
+
+            // Change the object back to original
+            document.write("<hr >");
+            ryan.major = "CIT";
+            document.write(ryan.user +  " is a " + group.u1.major + " major ");
+        </script>
+    </head>
+    <body>	
+    </body>
+</html>
